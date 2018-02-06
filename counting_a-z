@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define N 10
-/* writting a code for print level picture that rate of a-z&&A-Z */
+/* writting a code for print that rate of a-z&&A-Z */
 main()
 {
 	char a[N];
