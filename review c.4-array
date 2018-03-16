@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 20
+/* 将**A*B*C***变成**A*B*C */
+void fun(char *a);
+main()
+{
+	int i;
+	char a[N];
+	printf("please input a string.\n");
+	gets(a);
+	fun(a);
+	for(i=0;a[i]!='\0';i++)
+		printf("%c",a[i]);
+	system("pause");
+}
+void fun(char *a)
+{
+	int i;
+	for(i=0;a[i]!='\0';i++)
+	while(*a!='\0')
+		a++;
+	a--;
+	while(*a=='*')
+		a--;
+	*(a+1)='\0';
+}
