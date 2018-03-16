@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 30
+/* 若数组中有n个整数，要求把下标从0-p的数组元素平移到数组的最后 */
+void fun(int w[],int p,int n);
+main()
+{
+	int a[N],n,i,p;
+	printf("please input the number of array.\n");
+	scanf("%d",&n);
+	printf("please input digit in array.\n");
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	printf("What is the moving digit.\n");
+	scanf("%d",&p);
+	fun(a,p,n);
+	for(i=0;i<n;i++)
+		printf("%d ",a[i]);
+	system("pause");
+}
+void fun(int w[],int p,int n)
+{
+	int i,t,j;
+	for(i=0;i<=p;i++)
+	{
+		t=w[0];        /* 数组在向前移动 */
+		for(j=1;j<n;j++)
+			w[j-1]=w[j];
+		w[n-1]=t;
+	}
+
+}
