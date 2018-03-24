@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 20
+/* delete repeated digit*/
+int fun(int a[],int n);
+main()
+{
+	int a[N],n,i;
+	printf("please input the number of array.\n");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	n=fun(a,n);
+	for(i=0;i<n;i++)
+		printf("%d",a[i]);
+	system("pause");
+}
+int fun(int a[],int n)
+{
+	int i,j,x;
+	for(i=0;i<n-1;i++)
+		for(j=i+1;j<n;j++)
+			if(a[i]==a[j])
+			{
+				for(x=j+1;x<n;x++)
+					a[x-1]=a[x];
+				j--;
+				n--;
+			}
+	return n;
+}
